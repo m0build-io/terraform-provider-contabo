@@ -554,7 +554,7 @@ func AddInstanceToData(
 	if err := d.Set("product_id", instance.ProductId); err != nil {
 		return diag.FromErr(err)
 	}
-	ipConfig := buildIpConfig(&instance.IpConfig)
+	ipConfig := buildIpConfig(&instance.IpConfig1)
 	if err := d.Set("ip_config", ipConfig); err != nil && len(ipConfig) > 0 {
 		return diag.FromErr(err)
 	}

@@ -13,15 +13,15 @@ builds:
   ldflags:
       - -w -s -X contabo.com/terraform-provider-contabo/cmd.version={{.Tag}} -X contabo.com/terraform-provider-contabo/cmd.commit={{.Commit}} -X contabo.com/terraform-provider-contabo/cmd.date={{.Date}}
   goos:
-    - freebsd
-    - windows
+      #- freebsd
+      #- windows
     - linux
-    - darwin
+      #- darwin
   goarch:
     - amd64
-    - '386'
-    - arm
-    - arm64
+      #- '386'
+      #- arm
+      #- arm64
   ignore:
     - goos: darwin
       goarch: '386'
